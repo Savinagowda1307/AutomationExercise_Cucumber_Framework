@@ -1,14 +1,7 @@
 Feature: Add To Card
-
-  @tag2
-  Scenario Outline: Add To cart validation
+  
+  
+  Scenario : Add To cart validation
     Given User should be Logged into the automation exercies page
-    Then user can see the added Item in the cart once he add item to the cart with the excel row "<row_number>"
-
-    Examples: 
-      | row_number |
-      |          1 |
-      |          2 |
-      |          3 |
-      |          4 |
-      |          5 |
+    When user add multiple items to the cart with quantities
+    Then Cart Page should Contains the same Items with corresponding qunatities

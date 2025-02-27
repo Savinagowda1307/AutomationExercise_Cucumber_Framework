@@ -39,5 +39,31 @@ public class Loginpage extends Basepage{
 
 	
 	
+	
+	
+	@FindBy(xpath="//input[@data-qa='signup-email']")
+	WebElement signUpEmailInputBox;
+	public void setSignUpEmail(String email)
+	{
+		signUpEmailInputBox.sendKeys(email);
+	}
+	
+	
+	
+	@FindBy(xpath="//input[@placeholder='Name']")
+	WebElement namelInputBox;
+	public void setSName(String name)
+	{
+		namelInputBox.sendKeys(name);
+	}
+	
+	
+	
 
+	@FindBy(xpath="//button[normalize-space()='Signup']")
+	WebElement signUpbtn;
+	public void clickOnSignUpbtn()
+	{
+		signUpbtn.click();
+	}
 }
